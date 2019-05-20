@@ -1,0 +1,12 @@
+.container .title {
+  color: red;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 200;
+}
+.cmtList {
+  text-align: center;
+}
+.cmtList h1 {
+  font-weight: 200;
+}
