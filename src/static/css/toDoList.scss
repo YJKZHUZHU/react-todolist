@@ -80,17 +80,18 @@ section {
         height: 22px;
         cursor: pointer;
       }
+      p {
+        cursor: pointer;
+      }
       span {
         position: absolute;
         top: 2px;
         right: 5px;
-        display: inline-block;
         width: 60px;
-        height: 19px;
         border-radius: 14px;
         border: 6px double #FFF;
         background: red;
-        line-height: 19px;
+        line-height: 1.2;
         text-align: center;
         color: #FFF;
         font-weight: bold;

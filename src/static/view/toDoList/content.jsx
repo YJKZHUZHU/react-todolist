@@ -1,9 +1,10 @@
 import React from 'react'
-
+import ContentList from './contentList'
 export default class Content extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
+      isChecked: false
     }
   }
 
@@ -15,6 +16,7 @@ export default class Content extends React.Component {
     return this.props.todoList.filter(item => item.done)
   }
 
+ 
   render () {
     return (
       <section className='content'>
@@ -23,13 +25,7 @@ export default class Content extends React.Component {
         </h2>
         <ul>
           {this.unCompleteList.map((item, index) => {
-            return (
-              <li key={index}>
-                <input type="checkbox"/>
-                <p>{item.title}</p>
-                <span>删除</span>
-              </li>
-            )
+            return <ContentList key={index} title={item.title} index={index} todoId={item.id} getTodoListStatus={this.props.getTodoListStatus} checkedStatus={item.done}></ContentList>
           })}
         </ul>
         <h2>已经完成
@@ -37,13 +33,7 @@ export default class Content extends React.Component {
         </h2>
         <ul>
           {this.completeList.map((item, index) => {
-            return (
-              <li key={index} className='doneList'>
-                <input type="checkbox" />
-                <p id="todoContent">{item.title}</p>
-                <span>删除</span>
-              </li>
-            )
+            return <ContentList key={index} title={item.title} index={index} todoId={item.id} getTodoListStatus={this.props.getTodoListStatus} checkedStatus={item.done}></ContentList>
           })}
         </ul>
       </section>
