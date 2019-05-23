@@ -4,12 +4,9 @@ import PropTypes from 'prop-types'
 import Header from './static/view/toDoList/header'
 import Content from './static/view/toDoList/content'
 import Footer from './static/view/toDoList/footer'
-// import ThreeLevelLinkage from './static/view/Three-level-linkage/index'
 import './static/css/reset.scss'
 import './static/css/toDoList.scss'
-import './static/css/threeLevelLinkageButton.scss'
 class App extends React.Component {
-  
   static childContextTypes = {
     removeItem: PropTypes.func,
   }
@@ -118,7 +115,6 @@ class App extends React.Component {
       <Header addTodoItem={this.addTodoItem.bind(this)}></Header>
       <Content todoList={this.state.todoList} removeItem={this.removeItem.bind(this)} getTodoListStatus={this.getTodoListStatus.bind(this)} editTodoItem={this.editTodoItem.bind(this)}></Content>
       <Footer clear={this.clear.bind(this)}></Footer>
-      {/* <ThreeLevelLinkage></ThreeLevelLinkage> */}
     </div>
   } 
 }

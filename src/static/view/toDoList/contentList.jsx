@@ -5,6 +5,7 @@ export default class ContentList extends React.Component {
   static contextTypes = {
     removeItem: PropTypes.func
   }
+  
   constructor (props) {
     super(props)
     this.state = {
@@ -15,6 +16,7 @@ export default class ContentList extends React.Component {
       editText: props.title
     }
   }
+
   handelChange(e) {
     this.setState({
       isChecked: e.target.checked,
@@ -23,17 +25,20 @@ export default class ContentList extends React.Component {
         this.props.getTodoListStatus(this.state.done, this.props.todoId)
     })
   }
+
   display_name() {
     this.setState({
       display_name_p: 'none',
       display_name_input: 'block'
     })
   }
+
   edit(e) {
     this.setState({
       editText: e.target.value
     })
   }
+
   editEnter() {
     this.setState({
       display_name_p: 'block',
@@ -41,8 +46,8 @@ export default class ContentList extends React.Component {
     }, function() {
         this.props.editTodoItem(this.props.todoId, this.state.editText)
     })
-
   }
+  
   render() {
     return (
       <li style={{ background: (this.props.checkedStatus ? "#ccc" : "none") }}>

@@ -16,7 +16,6 @@ export default class Content extends React.Component {
     return this.props.todoList.filter(item => item.done)
   }
 
- 
   render () {
     return (
       <section className='content'>
