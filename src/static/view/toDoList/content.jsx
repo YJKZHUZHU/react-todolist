@@ -25,7 +25,7 @@ export default class Content extends React.Component {
         </h2>
         <ul>
           {this.unCompleteList.map((item, index) => {
-            return <ContentList key={index} title={item.title} index={index} todoId={item.id} getTodoListStatus={this.props.getTodoListStatus} checkedStatus={item.done}></ContentList>
+            return <ContentList key={index} title={item.title} index={index} todoId={item.id} getTodoListStatus={this.props.getTodoListStatus} editTodoItem={this.props.editTodoItem} checkedStatus={item.done}></ContentList>
           })}
         </ul>
         <h2>已经完成
@@ -33,7 +33,7 @@ export default class Content extends React.Component {
         </h2>
         <ul>
           {this.completeList.map((item, index) => {
-            return <ContentList key={index} title={item.title} index={index} todoId={item.id} getTodoListStatus={this.props.getTodoListStatus} checkedStatus={item.done}></ContentList>
+            return <ContentList key={index} title={item.title} index={index} todoId={item.id} getTodoListStatus={this.props.getTodoListStatus} checkedStatus={item.done} editTodoItem={this.props.editTodoItem}></ContentList>
           })}
         </ul>
       </section>

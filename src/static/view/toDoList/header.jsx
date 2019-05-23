@@ -20,9 +20,12 @@ export default class Header extends React.Component {
       if (e.target.value === '') {
         return alert('待办事项不能输入为空')
       }
-      this.props.addTodoItem(this.state.title, this.state.todoId++)
+      this.props.addTodoItem(this.state.title, this.state.todoId)
       this.setState({
-        title: ''
+        title: '',
+        todoId: this.state.todoId+1
+      },function() {
+          console.log(this.state.todoId)
       })
     }
   }
