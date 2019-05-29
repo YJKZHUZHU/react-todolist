@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 export default class Header extends React.Component {
   constructor(props) {
     super(props)
@@ -17,7 +18,6 @@ export default class Header extends React.Component {
         title: '',
         todoId: this.state.todoId + 1
       }, function () {
-        console.log(this.state.todoId)
       })
     }
   }
@@ -37,3 +37,7 @@ export default class Header extends React.Component {
     </header>
   }
 }  
+
+Header.propTypes = {
+  addTodoItem: PropTypes.func
+}

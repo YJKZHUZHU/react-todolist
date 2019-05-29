@@ -56,10 +56,9 @@ class App extends React.Component {
       todoList
     } = this.state
     // 返回被删除的数组
-    let removeItem = _.remove(todoList, function(item) {
+    _.remove(todoList, function(item) {
       return item.id === index
     })
-    console.log(removeItem)
     this.setState({
       todoList: todoList
     }, function() {
@@ -76,7 +75,6 @@ class App extends React.Component {
   }
 
   getTodoListStatus(value, index) {
-    console.log(value, index)
     const {
       todoList
     } = this.state

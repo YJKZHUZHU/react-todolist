@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import ContentList from './contentList'
 export default class Content extends React.Component {
   constructor (props) {
@@ -38,4 +39,11 @@ export default class Content extends React.Component {
       </section>
     )
   }
+}
+
+Content.propTypes = {
+  editTodoItem: PropTypes.func,
+  getTodoListStatus: PropTypes.func,
+  removeItem: PropTypes.func,
+  todoList: PropTypes.array
 }
