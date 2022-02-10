@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "axios": "^0.18.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "prop-types": "^15.7.2",
     "sass-loader": "^7.1.0"
   }
